@@ -1,0 +1,20 @@
+Questão 06
+
+O acoplamento entre classes refere-se ao grau de dependência que uma classe tem em relação a outra no contexto de um 
+sistema orientado a objetos. Em outras palavras, é a medida de como uma classe conhece e interage com outra classe.
+
+Um acoplamento forte ocorre quando uma classe depende diretamente de outra, ou seja, ela utiliza explicitamente 
+instâncias ou métodos dessa outra classe em seu código. 
+Isso significa que qualquer mudança na classe dependente pode ter um impacto direto na classe que a utiliza.
+
+Por outro lado, um acoplamento fraco ocorre quando as classes interagem de maneira mais independente e não possuem 
+muitas dependências mútuas. Elas podem se comunicar por meio de interfaces bem definidas, reduzindo a dependência 
+direta.
+
+Ter um acoplamento baixo é um princípio importante no design de software, pois proporciona maior flexibilidade e 
+facilita a manutenção e evolução do sistema. Classes com baixo acoplamento são mais fáceis de entender e modificar, 
+pois as mudanças em uma classe têm menos probabilidade de afetar diretamente outras partes do sistema.
+
+Portanto, o objetivo é buscar um equilíbrio adequado entre coesão e acoplamento. Classes bem projetadas têm alta 
+coesão (os membros estão fortemente relacionados) e baixo acoplamento (elas têm poucas dependências diretas entre si). 
+Isso contribui para a criação de sistemas mais robustos, flexíveis e fáceis de manter.

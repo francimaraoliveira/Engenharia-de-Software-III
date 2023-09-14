@@ -1,0 +1,79 @@
+Questão 14
+
+Aqui está um exemplo de código com um problema de acoplamento:
+
+```java
+public class Pedido {
+    private Produto produto;
+
+    public Pedido(Produto produto) {
+        this.produto = produto;
+    }
+
+    public void processarPedido() {
+        // Lógica para processar o pedido
+        produto.atualizarEstoque();
+    }
+}
+
+public class Produto {
+    private int estoque;
+
+    public Produto(int estoque) {
+        this.estoque = estoque;
+    }
+
+    public void atualizarEstoque() {
+        // Lógica para atualizar o estoque
+    }
+}
+```
+
+Neste exemplo, a classe `Pedido` depende diretamente da classe `Produto`. Quando um pedido é processado, ele chama 
+o método `atualizarEstoque` do objeto `produto`. Isso cria um acoplamento forte entre as classes `Pedido` e `Produto`.
+
+Para melhorar o acoplamento, poderíamos introduzir uma interface ou uma classe abstrata para representar um item que 
+pode ser pedido:
+
+```java
+public interface ItemPedido {
+    void processarPedido();
+}
+```
+
+Em seguida, ambas as classes `Pedido` e `Produto` poderiam implementar essa interface:
+
+```java
+public class Pedido implements ItemPedido {
+    private Produto produto;
+
+    public Pedido(Produto produto) {
+        this.produto = produto;
+    }
+
+    public void processarPedido() {
+        // Lógica para processar o pedido
+        produto.atualizarEstoque();
+    }
+}
+
+public class Produto implements ItemPedido {
+    private int estoque;
+
+    public Produto(int estoque) {
+        this.estoque = estoque;
+    }
+
+    public void processarPedido() {
+        atualizarEstoque();
+    }
+
+    private void atualizarEstoque() {
+        // Lógica para atualizar o estoque
+    }
+}
+```
+
+Agora, as classes `Pedido` e `Produto` implementam a interface `ItemPedido`, o que significa que ambas têm um método 
+`processarPedido`. Isso reduz o acoplamento entre as classes, pois elas estão interagindo através de uma interface 
+abstrata em vez de dependerem diretamente uma da outra.

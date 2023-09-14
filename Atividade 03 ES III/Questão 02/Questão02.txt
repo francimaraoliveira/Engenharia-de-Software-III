@@ -1,0 +1,29 @@
+Questão 02
+
+A coesão é um princípio de design de software que se refere ao grau em que os elementos de um módulo (como uma classe
+ou um componente) estão relacionados e focados em realizar uma única responsabilidade ou funcionalidade específica. 
+Quanto maior a coesão, mais focado e claro é o propósito do módulo.
+
+**Fontes**:
+
+**a. Livro Clean Code (páginas de 140 a 151):**
+No livro Clean Code, a coesão é abordada como um dos princípios fundamentais para escrever código limpo e legível. 
+É enfatizado que as classes devem ter uma única responsabilidade clara e não devem misturar diferentes funcionalidades. 
+A coesão ajuda a manter o código mais organizado, compreensível e facilita a manutenção.
+
+**b. Artigo "Coesão e Acoplamento em Sistemas Orientados a Objetos":**
+Este artigo discute a coesão e o acoplamento em sistemas orientados a objetos. Ele destaca que a coesão está 
+relacionada à organização interna de uma classe ou módulo, e que um alto grau de coesão indica que os elementos estão
+fortemente relacionados e trabalham juntos para atingir um objetivo específico. A baixa coesão, por outro lado, sugere 
+que o módulo pode estar tentando fazer coisas demais.
+
+**c. Livro "Orientação a Objetos e SOLID para Ninjas Projetando classes flexíveis - Casa do Código" 
+(Princípio da responsabilidade única, página 5 em diante):**
+Este livro destaca o Princípio da Responsabilidade Única (SRP) como parte dos princípios SOLID. O SRP está 
+diretamente relacionado à coesão, pois defende que uma classe deve ter apenas uma razão para mudar. Ou seja, ela deve
+ter uma única responsabilidade bem definida. Isso contribui para a coesão, pois uma classe focada em uma única 
+responsabilidade tende a ter alta coesão.
+
+Em resumo, a coesão é um princípio crucial no design de software que promove a organização, clareza e facilidade 
+de manutenção do código. Classes ou módulos altamente coesos são mais eficazes em realizar uma única funcionalidade, 
+enquanto baixa coesão pode indicar que o módulo está tentando fazer muitas coisas diferentes ao mesmo tempo.

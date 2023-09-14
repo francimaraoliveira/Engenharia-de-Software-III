@@ -1,0 +1,17 @@
+Questão 01
+
+A coesão está diretamente relacionada às responsabilidades de uma classe. Ela se refere à medida em que os 
+elementos (métodos e atributos) de uma classe estão relacionados e trabalham juntos para atingir um propósito comum.
+
+Se uma classe possui alta coesão, significa que seus métodos e atributos estão fortemente relacionados e trabalham 
+juntos para cumprir uma única responsabilidade ou propósito bem definido. Isso geralmente resulta em um código 
+mais claro, modular e fácil de entender.
+
+Por outro lado, se uma classe possui baixa coesão, seus métodos e atributos podem estar relacionados de forma fraca 
+ou até mesmo não terem uma relação clara entre si.
+Isso pode indicar que a classe está tentando fazer coisas diferentes ou possui uma mistura de responsabilidades.
+
+Portanto, a coesão é um indicador da qualidade do design de uma classe em termos de quão bem ela cumpre suas 
+responsabilidades. Classes com alta coesão tendem a ser mais fáceis de manter, testar e entender, enquanto classes 
+com baixa coesão podem ser mais propensas a problemas de manutenção e complexidade. Portanto, buscar alta coesão é 
+um princípio importante no design de software.                                             

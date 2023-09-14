@@ -1,0 +1,51 @@
+Questão 08
+O princípio "Tell, don't ask" (Diga, não pergunte) é uma diretriz de design de software que sugere que um objeto 
+deve delegar a responsabilidade de realizar uma ação em vez de solicitar informações sobre o estado de outro objeto 
+para então decidir o que fazer. Isso ajuda a mitigar problemas de acoplamento por algumas razões:
+
+1. **Reduz a Dependência Direta**: Quando um objeto pede informações sobre o estado de outro objeto, ele cria uma 
+dependência direta entre eles.
+Ao usar o princípio "Tell, don't ask", essa dependência é reduzida, pois o objeto delega a responsabilidade para o 
+outro, sem precisar saber detalhes internos.
+
+2. **Encapsulamento Reforçado**: O objeto que possui a informação ou o comportamento é responsável por decidir como 
+manipulá-lo. Isso mantém o encapsulamento e evita que detalhes internos sejam expostos.
+
+3. **Flexibilidade para Mudanças**: Quando objetos pedem informações, eles estão assumindo um conhecimento sobre a 
+estrutura interna do outro objeto. Isso torna o código mais frágil a mudanças, já que qualquer alteração no objeto 
+consultado pode afetar aquele que está pedindo a informação. Com "Tell, don't ask", as mudanças no objeto consultado 
+não afetam diretamente o objeto que delega a responsabilidade.
+
+4. **Promove Coesão e Baixo Acoplamento**: O princípio "Tell, don't ask" incentiva o design de classes mais coesas, 
+onde cada classe é responsável por seu próprio comportamento. Isso resulta em um menor acoplamento entre as classes, 
+já que elas não precisam conhecer detalhes internos umas das outras.
+
+Como exemplo de um sistema de pedidos em uma loja online. Em vez de um objeto `CarrinhoDeCompras` perguntar se um 
+`Produto` está disponível antes de adicioná-lo ao carrinho, ele apenas pede para o `Produto` ser adicionado. 
+Se o produto não estiver disponível, o próprio `Produto` decide como lidar com essa situação.
+
+```java
+public class CarrinhoDeCompras {
+    public void adicionarProduto(Produto produto) {
+        produto.adicionarAoCarrinho(this);
+    }
+}
+
+public class Produto {
+    public void adicionarAoCarrinho(CarrinhoDeCompras carrinho) {
+        if (this.estaDisponivel()) {
+            // Adiciona o produto ao carrinho
+        } else {
+            // Lida com a situação de produto não disponível
+        }
+    }
+
+    public boolean estaDisponivel() {
+        // Lógica para verificar disponibilidade
+    }
+}
+```
+
+Neste exemplo, o `CarrinhoDeCompras` apenas diz ao `Produto` para ser adicionado, sem verificar se está disponível. 
+O `Produto` é responsável por decidir o que fazer com base em seu próprio estado. Isso reduz a dependência e torna 
+o código mais flexível a mudanças no comportamento do `Produto`.

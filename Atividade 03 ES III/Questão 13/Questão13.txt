@@ -1,0 +1,43 @@
+Questão 13
+
+Claro, aqui está um exemplo de código com um problema de coesão funcional:
+
+```java
+public class Calculadora {
+
+    public int soma(int a, int b) {
+        return a + b;
+    }
+
+    public String obterNomeOperacao() {
+        return "Soma";
+    }
+}
+```
+
+Neste exemplo, a classe `Calculadora` possui dois métodos: `soma` e `obterNomeOperacao`. O método `soma` é uma 
+operação matemática funcional, enquanto `obterNomeOperacao` retorna o nome da operação.
+
+O problema de coesão aqui é que estamos misturando funcionalidades diferentes em uma única classe. A operação 
+matemática `soma` e a obtenção do nome da operação não têm uma relação direta e deveriam estar em classes separadas.
+
+Para melhorar a coesão funcional, poderíamos dividir essas funcionalidades em classes distintas, como:
+
+```java
+public class Calculadora {
+
+    public int soma(int a, int b) {
+        return a + b;
+    }
+}
+
+public class Operacao {
+
+    public String obterNomeOperacao() {
+        return "Soma";
+    }
+}
+```
+Agora temos duas classes separadas, cada uma com uma única responsabilidade bem definida. A classe `Calculadora` 
+é responsável pelas operações matemáticas, enquanto a classe `Operacao` é responsável por obter o nome da operação. 
+Isso melhora a coesão funcional do código.

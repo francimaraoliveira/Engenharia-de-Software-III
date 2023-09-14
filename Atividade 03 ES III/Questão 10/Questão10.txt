@@ -1,0 +1,49 @@
+Questão 10
+O encapsulamento é uma técnica fundamental de programação orientada a objetos que ajuda a reduzir o acoplamento entre 
+diferentes partes de um sistema. Ao encapsular os detalhes de implementação de uma classe e fornecer uma interface bem 
+definida para interagir com ela, é possível limitar o acesso direto aos seus membros internos, promovendo assim um 
+menor acoplamento.
+
+Será discutido o exemplo da página 7 do artigo "Coesão e Acoplamento em Sistemas Orientados a Objetos" para entender 
+como o encapsulamento pode contribuir para mitigar o acoplamento alto:
+
+Suponha que tem uma classe chamada `ContaCorrente` que possui um atributo `saldo` e métodos para realizar operações 
+bancárias, como `depositar` e `sacar`. Inicialmente, essa classe pode ter a seguinte implementação:
+
+```java
+public class ContaCorrente {
+    private double saldo;
+
+    public void depositar(double valor) {
+        saldo += valor;
+    }
+
+    public void sacar(double valor) {
+        if (valor <= saldo) {
+            saldo -= valor;
+        } else {
+            System.out.println("Saldo insuficiente.");
+        }
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+}
+```
+
+Neste exemplo, o atributo `saldo` está encapsulado como privado, e só pode ser acessado através dos métodos 
+`depositar`, `sacar` e `getSaldo`. Isso significa que outros objetos não têm acesso direto ao saldo da conta.
+
+Agora, imagine que em algum ponto no código, precisamos verificar o saldo de uma conta antes de realizar uma operação. 
+Se o atributo `saldo` fosse público, poderíamos simplesmente acessá-lo diretamente. No entanto, devido ao 
+encapsulamento, precisamos usar o método `getSaldo`.
+
+Isso pode parecer mais trabalhoso à primeira vista, mas tem um benefício significativo: se a lógica para determinar o 
+saldo muda no futuro (por exemplo, se passamos a considerar taxas ou juros), só precisamos atualizar a implementação 
+do método `getSaldo`. Os outros objetos que interagem com a classe `ContaCorrente` não precisam ser alterados, porque 
+ainda estão usando a interface definida pelos métodos públicos.
+
+Em resumo, o encapsulamento ajuda a reduzir o acoplamento porque limita o acesso direto aos membros internos de uma 
+classe, fornecendo uma interface controlada para interagir com ela. Isso permite que a implementação interna de uma 
+classe seja alterada sem afetar outros objetos que a utilizam.

@@ -1,0 +1,28 @@
+Questão 09
+
+Em teoria, é possível conceber um sistema onde o acoplamento entre as classes seja reduzido ao mínimo absoluto. 
+No entanto, na prática, zerar completamente o acoplamento em um sistema, especialmente em um software complexo, 
+é extremamente improvável e muitas vezes impraticável. Existem várias razões para isso:
+
+1. **Interdependência Funcional**: Em um sistema funcional, algumas classes precisarão se comunicar e colaborar 
+entre si para cumprir os objetivos do software. Zerar o acoplamento significaria que cada classe teria que operar de 
+forma completamente independente, o que pode ser impraticável.
+
+2. **Requisitos do Negócio**: Muitas vezes, os requisitos do negócio exigem que diferentes partes do sistema interajam
+e compartilhem informações. Isso pode incluir a troca de dados entre classes.
+
+3. **Frameworks e Bibliotecas**: Ao utilizar bibliotecas e frameworks, muitas vezes é necessário acoplar as classes 
+do sistema a essas ferramentas para aproveitar suas funcionalidades. Reduzir esse acoplamento a zero seria impossível
+sem renunciar ao uso dessas bibliotecas.
+
+4. **Manutenabilidade e Entendimento**: Reduzir o acoplamento a zero pode resultar em um código excessivamente 
+fragmentado e difícil de entender, especialmente para outros desenvolvedores que podem precisar trabalhar no projeto.
+
+5. **Complexidade do Domínio**: Em sistemas complexos, o domínio do problema pode ser intrinsecamente acoplado. 
+Por exemplo, em sistemas financeiros, diferentes partes do sistema precisam interagir para calcular e processar 
+transações.
+
+Em vez de tentar zerar o acoplamento, o objetivo prático é sempre **minimizá-lo**. Isso é feito através de boas 
+práticas de design, como o uso de padrões de arquitetura, princípios de design (como o SOLID), e técnicas como 
+a injeção de dependência. Reduzir o acoplamento ajuda a criar um código mais flexível, reutilizável e fácil de 
+manter, sem a necessidade de eliminar completamente as dependências entre classes.
