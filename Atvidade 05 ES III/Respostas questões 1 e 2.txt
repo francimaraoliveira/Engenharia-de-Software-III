@@ -1,0 +1,6 @@
+1. O nome "Liskov" faz referência a Barbara Liskov, uma renomada cientista da computação que, juntamente com Jeannette Wing, formalizou os princípios de substituição de Liskov em 1987. 
+Esses princípios ajudaram a definir as bases da programação orientada a objetos e são amplamente utilizados até hoje. É uma homenagem a seu trabalho e contribuição para a área.
+
+2. Uma imagem comumente usada para descrever o princípio de Liskov é a de um quadrado e um retângulo. Ambos são formas geométricas, com o retângulo sendo uma forma especializada do quadrado. 
+O quadrado pode ser substituído pelo retângulo em qualquer situação em que um retângulo seja esperado. No entanto, a herança direta de um quadrado de um retângulo pode levar a violações do 
+princípio de Liskov porque os comportamentos esperados do retângulo não se aplicam necessariamente ao quadrado.
