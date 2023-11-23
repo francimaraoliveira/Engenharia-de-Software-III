@@ -1,0 +1,6 @@
+De acordo com a questão, a herança entre as classes ContaPoupanca e ContaBancaria não é totalmente justificada porque a classe ContaPoupanca está estendendo ContaBancaria, 
+mas sobrescreve o método sacar da classe pai para adicionar uma lógica específica de uma conta poupança. 
+Embora a classe ContaPoupanca herde propriedades e métodos da ContaBancaria, a sobreposição do método sacar pode não ser o melhor uso da herança, pois modifica 
+o comportamento padrão do método da classe pai e limita a funcionalidade.
+Como solução seria utilizar a composição em vez da herança. A composição permite que uma classe contenha instâncias de outras classes, o que oferece mais flexibilidade 
+e controle sobre o comportamento específico de cada tipo de conta.
